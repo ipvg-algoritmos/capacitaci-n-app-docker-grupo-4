@@ -99,6 +99,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'posstoredb',
+        'USER': 'adminuser',
+        'PASSWORD': 'posStore123',
+        'HOST': 'inventariodb.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    }
+}
+
+"""
 def get_db_config(environ_var='DATABASE_URL'):
     """Get Database configuration."""
     options = env.db(var=environ_var, default='sqlite:///db.sqlite3')
@@ -116,7 +131,7 @@ def get_db_config(environ_var='DATABASE_URL'):
 DATABASES = {
     'default': get_db_config()
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
