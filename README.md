@@ -18,7 +18,7 @@ Este proyecto se basa en el repositorio original:
 ### 1. Clona el proyecto
 
 ```bash
-git clone https://github.com/wdavilav/pos-store.git
+git clone https://github.com/CamiloJaraG/pos-store.git
 cd pos-store
 ```
 
